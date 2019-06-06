@@ -31,6 +31,7 @@ int main() {
             printf("%s is beyond the range of a valid MIDI note number", message);
         }
 
+        printf("\nEnter MIDI note (0 - 127): ");
         result = fgets(message, 128, stdin);
         midinote = atoi(message);
     }
