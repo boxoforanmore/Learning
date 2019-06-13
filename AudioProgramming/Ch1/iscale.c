@@ -52,14 +52,14 @@ int main(int argc, char* argv[]) {
         if (argv[0][0] == '-') {
             char flag;
             flag = argv[0][1];
-            if (flag == 'm') {
+            if (flag == 'm' && !read_as_midi) {
                 read_as_midi = 1;
             }
-            else if (flag == 'i') {
+            else if (flag == 'i' && !write_intervals) {
                 write_intervals = 1;
             }
             else {
-                printf("ERROR: %s is not a valid flag\n", argv[i]);
+                printf("ERROR: %s is not a valid flag (or it may be a duplicate flag)\n", argv[i]);
                 return 1;
             }
 
@@ -101,7 +101,7 @@ int main(int argc, char* argv[]) {
     }
     else {
         if (startval <= 0.0) {
-            printf("ERROR: The frequency must be a positive number");
+            printf("ERROR: The frequency must be a positive number\n");
             return 1;
         }
         else {
