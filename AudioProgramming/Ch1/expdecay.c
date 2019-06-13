@@ -7,7 +7,8 @@
 #include <stdio.h>
 #include <math.h>
 
-enum {ARG_NARGS};
+// Program Argument List
+enum {ARG_NAME, ARG_DUR, ARG_T, ARG_STEPS, ARG_NARGS};
 
 int main(int argc, char* argv[])  {
 
@@ -24,9 +25,9 @@ int main(int argc, char* argv[])  {
         return 1;
     }
 
-    dur = atof(argv[1]);
-    T = atof(argv[2]);
-    nsteps = atoi(argv[3]);
+    dur = atof(argv[ARG_DUR]);
+    T = atof(argv[ARG_T]);
+    nsteps = atoi(argv[ARG_STEPS]);
 
     k = dur/nsteps;    // Constant time increment
     a = exp(-k/T);     // Constant ratio value
