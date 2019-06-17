@@ -73,7 +73,7 @@ int main(int argc, char* argv[]) {
     fprintf(stdout, "%.4lf\t%.8lf\n", thisstep, (offset + (start * valrange)));
 
     // Done
-    //fprintf(stderr, "Done");
+    fprintf(stderr, "Done\n");
 
     return 0;
 }
