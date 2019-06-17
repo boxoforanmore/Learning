@@ -31,7 +31,7 @@ int main(int argc, char* argv[]) {
 
     for(i=0; i < nsamps; i++) {
         samp = sin(angleincr * i);
-        fprintf(stdout, "%.8lf\n", samp);
+        fprintf(stdout, "%.8lf\t%.8lf\n", samp, samp * samp);
     }
 
     fprintf(stderr, "Done\n");
