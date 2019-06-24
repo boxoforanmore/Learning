@@ -17,7 +17,7 @@ int main(int argc, char* argv[]) {
     int ofd = -1;
     int error = 0;
     int i;
-    int ampfac;
+    float ampfac;
 
     psf_format outformat = PSF_FMT_UNKNOWN;
     PSF_CHPEAK* peaks = NULL;
@@ -93,9 +93,6 @@ int main(int argc, char* argv[]) {
 
     while(framesread == 1) {
         totalread++;
-
-        int i;
-        float ampfac;
 
         for(i=0; i < props.chans; i++) {
             frame[i] *= ampfac;
