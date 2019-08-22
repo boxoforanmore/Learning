@@ -28,6 +28,11 @@ LOGIN_REDIRECT_URL = 'dashboard'  # Redirect to here if no next parameter presen
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
+
+# Email Settings
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'    # Console print out email
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
