@@ -22,6 +22,11 @@ class Image(models.Model):
     created = models.DateField(auto_now_add=True,
                                db_index=True)
 
+    # Many to many field for user likes
+    users_like = models.ManyToManyField(settings.AUTH_USER_MODEL,
+                                        related_name='images_liked',
+                                        blank=True)
+
 
     def __str__(self):
         return self.title
