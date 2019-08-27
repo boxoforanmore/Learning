@@ -36,7 +36,11 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'    # Console pr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '7c9f1566.ngrok.io',
+]
 
 
 # Application definition
